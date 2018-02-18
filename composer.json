@@ -1,0 +1,32 @@
+{
+    "name": "filippo-toso/vat-api",
+    "description": "A simple class to get European VAT ID details (company name and address)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filippo Toso",
+            "email": "filippo.toso@creativepark.it"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "illuminate/support": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FilippoToso\\VatApi\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FilippoToso\\VatApi\\VatApiServiceProvider"
+            ]
+        },
+        "aliases": {
+            "Vat": "FilippoToso\\VatApi\\Facade"
+        }
+    }
+}
