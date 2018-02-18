@@ -23,10 +23,10 @@
         "laravel": {
             "providers": [
                 "FilippoToso\\VatApi\\VatApiServiceProvider"
-            ]
-        },
-        "aliases": {
-            "Vat": "FilippoToso\\VatApi\\VatApiFacade"
-        }
+            ],
+            "aliases": {
+                "Vat": "FilippoToso\\VatApi\\VatApiFacade"
+            }
+        }    
     }
 }
