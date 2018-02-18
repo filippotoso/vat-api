@@ -38,3 +38,20 @@ The use is very simple:
 ```
 $details = Vat::details('LU26375245');
 ```
+
+This will return the following array:
+
+```
+[
+
+    [valid] => TRUE
+    [vat_id] => IT02861640304
+    [name] => CREATIVE PARK DI FILIPPO TOSO
+    [addresses] => [
+        [0] => VIA DANTE 1/B
+        [1] => 33057 PALMANOVA UD
+    ]
+    [address] => VIA DANTE 1/B 33057 PALMANOVA UD
+    [error] => FALSE
+]
+```

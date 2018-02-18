@@ -35,7 +35,7 @@ class VatApi
      */
     public function details($vat) {
 
-        $vat = trim($vat);
+        $vat = preg_replace('#\s#si', '', $vat);
 
         $valid = ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'EL', 'ES', 'FI', 'FR', 'GB', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK'];
         $pattern = sprintf('#^(%s)(.*)#si', implode('|', $valid));
@@ -141,6 +141,7 @@ class VatApi
 
         $result['addresses'] = empty($result['addresses']) ? [] : explode("\r\n", $result['addresses']);
         $result['address'] = preg_replace('#\s+#', ' ', implode(' ', $result['addresses']));
+        $result['vat_id'] = preg_replace('#\s#', '', $result['vat_id']);
 
         return $result;
 

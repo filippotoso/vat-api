@@ -26,7 +26,7 @@
             ]
         },
         "aliases": {
-            "Vat": "FilippoToso\\VatApi\\Facade"
+            "Vat": "FilippoToso\\VatApi\\VatApiFacade"
         }
     }
 }
