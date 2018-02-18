@@ -17,15 +17,15 @@ Use Composer to install it:
 composer require filippo-toso/vat-api
 ```
 
-If you are using Laravel < 5.5, you also need to:
+If you are using Laravel < 5.5, you also need to register the service provider and the alias.
 
-1. register the service provider in the providers array of your config/app.php:
+To do so, add the following row in the providers array of your config/app.php:
 
 ```
 FilippoToso\VatApi\VatApiServiceProvider::class,
 ```
 
-2. add the following row in the aliases array of the same config/app.php file:
+You should also add the following row in the aliases array of the same config/app.php file:
 
 ```
 'Vat'   => FilippoToso\VatApi\VatApiFacade::class,
